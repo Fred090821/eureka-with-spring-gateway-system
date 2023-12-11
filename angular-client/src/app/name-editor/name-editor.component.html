@@ -1,0 +1,62 @@
+<div>
+
+    <div>
+
+        <input type="text" placeholder="number..." [formControl]="num1Control">
+        <div id="small" *ngIf="num1Control.invalid && (num1Control.dirty )">
+            <div *ngIf="num1Control.hasError('required')">Number is required.</div>
+            <div *ngIf="num1Control.hasError('pattern')">Number must be a valid number.</div>
+        </div>
+
+        *
+
+        <input type="text" placeholder="number..." [formControl]="num2Control">
+        <div id="small" *ngIf="num2Control.invalid && (num2Control.dirty )">
+            <div *ngIf="num2Control.hasError('required')">Number is required.</div>
+            <div *ngIf="num2Control.hasError('pattern')">Number must be a valid number.</div>
+        </div>
+
+
+        <div *ngIf="multiplicationResult"> = <input type="text" [value]="multiplicationResult.result"> </div>
+    </div>
+
+    <div>
+        <button type="button" (click)=" sendData()">Enter</button>
+    </div>
+
+    <div id="small" *ngIf="errorMessage">
+        {{errorMessage | json}}
+    </div>
+
+</div>
+
+<div *ngIf="multiplicationResult && !num2Control.hasError('required') 
+&& !num2Control.hasError('pattern') 
+&& !num1Control.hasError('required')
+ && !num1Control.hasError('pattern') && !errorMessage">
+    <div id="main">
+
+        <table class="timecard">
+            <caption>First instance details</caption>
+            <tbody>
+                <tr class="even">
+                    <th>Instance name </th>
+                    <td>{{multiplicationResult.instanceName}}</td>
+                </tr>
+                <tr class="odd">
+                    <th>Instance port</th>
+                    <td>{{multiplicationResult.instancePort}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <h3>Load Balancing Demonstration:</h3>
+    <p> By clicking the button, you'll observe that Eureka effectively distributes the load
+        between the two application instances. This balancing act is illustrated as the port
+        number shifts dynamically between the instances, showcasing the load distribution in action.
+    </p>
+
+</div>
+

@@ -1,0 +1,11 @@
+server:
+  port: 8761
+
+eureka:
+  client:
+    # Eureka should not be registering itself
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka #specifying multiple Eureka servers here
+      # increases availability, client can shift between servers

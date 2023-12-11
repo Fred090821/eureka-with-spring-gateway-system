@@ -1,0 +1,121 @@
+label {
+  font-weight: bold;
+  display: inline-block;
+  padding: 10px;
+}
+
+button {
+  max-width: 300px;
+}
+
+input[type=text] {
+  padding: 10px;
+  margin: 10px 20px 20px 20px;
+  width: 20%;
+  border-radius: 50px;
+  padding: 10px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+
+#small {  
+  font-size: 0.875em;
+}  
+
+input {
+  width: 20%;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+button {
+
+  /* remove default behavior */
+  appearance: none;
+  -webkit-appearance: none;
+
+  /* usual styles */
+  padding: 10px;
+  margin: 10px 0 10px 20px;
+  width: 20%;
+  border-radius: 50px;
+  padding: 10px;
+  border: 0;
+  background-color: #6443b0;
+  color: #fff;
+  font-weight: 600;
+  width: 20%;
+
+}
+
+
+body {
+  background-color: #f6f6ff;
+  font-family: Calibri, Myriad;
+}
+
+#main {
+  width: 780px;
+  padding: 20px;
+  margin: auto;
+}
+
+table.timecard {
+
+  width: 600px;
+  border-collapse: collapse;
+  border: 1px solid #fff;
+  /*for older IE*/
+  border-style: hidden;
+}
+
+table.timecard caption {
+  background-color: #f79646;
+  color: #fff;
+  font-size: x-large;
+  font-weight: bold;
+  letter-spacing: .3em;
+}
+
+table.timecard th,
+table.timecard td {
+  width: 50%;
+  padding: 3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #f79646 #ccc;
+}
+
+table.timecard td {
+  text-align: center;
+}
+
+table.timecard tbody th {
+  width: 15%;
+  text-align: left;
+  font-weight: normal;
+}
+
+
+table.timecard tr.even {
+  background-color: #fde9d9;
+}
+
+#leftbox {
+  float:left;
+  background:rgb(248, 246, 246);
+  width:25%;
+  height:280px;
+}
+#middlebox{
+  float:left;
+  background:rgb(248, 246, 246);
+  width:50%;
+  height:280px;
+}
+#rightbox{
+  float:right;
+  background:rgb(248, 246, 246);
+  width:25%;
+  height:280px;
+}
